@@ -138,20 +138,20 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
     {
                 id:1,
-                title:"name of project 1",
-                description:"Project 1 description",
-                image:"/images/projects/1.png",
+                title:"Expense App",
+                description:"Track all of your expenses",
+                image: "/projects/expense-app.png",
                 name: ["All", "Web"],
-                gitUrl:"/",
+                gitUrl:"https://github.com/adimond24/expense-app",
                 previewUrl:"/",
             },
             {
                 id:2,
-                title:"name of project 2",
-                description:"Project 2 description",
-                image: "/images/projects/2.png",
+                title:"Firebase Notes",
+                description:"keep track of all the tasks you need to complete",
+                image:"/projects/Firebase-notes.png",
                 name:["All", "Web"],
-                gitUrl:"/",
+                gitUrl:"https://github.com/adimond24/firebase-notes-app",
                 previewUrl:"/",
             },
             {
@@ -212,21 +212,21 @@ const ProjectsSection = () => {
 
     return (
         <section ref={ref}>
-            <h2>My Projects</h2>
+            <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>My Projects</h2>
             <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
                 <ProjectTag
                     onClick={handleTagChange}
-                    tag="All"
+                    name="All"
                     isSelected={tag === "All"}
                 />
                 <ProjectTag
                     onClick={handleTagChange}
-                    tag="Web"
+                    name="Web"
                     isSelected={tag === "Web"}
                 />
                 <ProjectTag
                     onClick={handleTagChange}
-                    tag="Mobile"
+                    name="Mobile"
                     isSelected={tag === "Mobile"}
                 />
             </div>
